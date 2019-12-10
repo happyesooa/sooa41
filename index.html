@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KIRSH lookbook</title>
+	<style type="text/css">
+		body{background-color: #f4f4f4;}
+		
+      
+    </style>
+<body>
+	<img src="logo.png" style="width:5%;top:50px;right:735px; position:absolute;">
+	<img src="body.png" style="width:10%;top:140px;right:695px; position:absolute;">
+
+    <img src="skirt1.png" class="drag"  style="width:8.3%; top:470px; left:240px; position:absolute;">
+    <img src="skirt2.png" class="drag"  style="width:8.3%; top:470px; left:270px; position:absolute;">
+    <img src="skirt3.png" class="drag"  style="width:10.4%; top:470px; left:290px; position:absolute;">
+    <img src="skirt4.png" class="drag"  style="width:8.3%; top:465px; left:340px; position:absolute;">
+    <img src="skirt5.png" class="drag"  style="width:9%; top:470px; left:372px; position:absolute;">
+    <img src="skirt6.png" class="drag"  style="width:9%; top:470px; left:430px; position:absolute;">
+
+
+	<img src="mtm1.png" class="drag" style="width:12%;top:250px;right:430px; position:absolute;">
+	<img src="mtm2.png" class="drag"  style="width:13%;top:250px;right:382px; position:absolute;">
+	<img src="mtm3.png" class="drag"  style="width:11%;top:250px;right:370px; position:absolute;">	
+	<img src="mtm4.png" class="drag"  style="width:13%;top:250px;right:310px; position:absolute;">
+	<img src="mtm5.png" class="drag"  style="width:13%;top:250px;right:270px; position:absolute;">
+	<img src="mtm6.png" class="drag"  style="width:12%;top:250px;right:230px; position:absolute;">
+	<img src="mtm7.png" class="drag"  style="width:14.5%;top:240px;right:180px; position:absolute;">
+
+	<img src="Clothes1.png" class="drag"  style="width:11%; top:235px; left:230px; position:absolute;">
+	<img src="Clothes2.png" class="drag"  style="width:11%; top:235px; left:255px; position:absolute;">
+	<img src="Clothes3.png" class="drag"  style="width:11%; top:235px; left:295px; position:absolute;">
+    <img src="Clothes4.png" class="drag"  style="width:11.5%; top:240px; left:333px; position:absolute;"> 
+    <img src="Clothes5.png" class="drag"  style="width:11.5%; top:240px; left:373px; position:absolute;">
+    <img src="Clothes6.png" class="drag"  style="width:11%; top:240px; left:410px; position:absolute;">
+
+    <img src="hat1.png" class="drag"  style="width:4.7%; top:147px; left:285px; position:absolute;">
+    <img src="hat2.png" class="drag"  style="width:6%; top:155px; left:373px; position:absolute;">
+    <img src="hat3.png" class="drag"  style="width:6%; top:155px; left:470px; position:absolute;">
+
+    <img src="card1.png" class="drag"  style="width:7%; top:220px; left:130px; position:absolute;">
+    <img src="card2.png" class="drag"  style="width:3%; top:290px; left:155px; position:absolute;">
+    <img src="card3.png" class="drag"  style="width:3%; top:340px; left:155px; position:absolute;">
+    <img src="card4.png" class="drag"  style="width:2.7%; top:390px; left:159px; position:absolute;">
+
+    <img src="bag1.png" class="drag"  style="width:8.5%;top:525px;right:470px; position:absolute;">
+	<img src="bag2.png" class="drag"  style="width:8.5%;top:560px;right:400px; position:absolute;">	
+	<img src="bag3.png" class="drag"  style="width:10%;top:500px;right:350px; position:absolute;">
+    <img src="bag4.png" class="drag"  style="width:11.3%;top:480px;right:270px; position:absolute;">	
+    <img src="bag5.png" class="drag"  style="width:9%;top:515px;right:200px; position:absolute;">	
+    <img src="bag6.png" class="drag"  style="width:9.5%;top:500px;right:160px; position:absolute;">
+
+    
+	<img src="case1.png" class="drag"  style="width:1.8%;top:160px;right:546px; position:absolute;">
+	<img src="case2.png" class="drag"  style="width:1.8%;top:160px;right:512px; position:absolute;">
+	<img src="case3.png" class="drag"  style="width:1.8%;top:160px;right:480px; position:absolute;">
+	<img src="ring1.png" class="drag"  style="width:2.5%;top:153px;right:422px; position:absolute;">
+	<img src="ring2.png" class="drag"  style="width:2.1%;top:153px;right:394px; position:absolute;">
+	<img src="ring3.png" class="drag"  style="width:4.5%;top:125px;right:330px; position:absolute;">
+	<img src="pouch1.png" class="drag"  style="width:5%;top:155px;right:235px; position:absolute;">
+
+ 	<script type="text/javascript">
+
+	//스티커 드래그 앤 드롭
+	(function(){
+		var d = false;
+		var target,dx,dy;
+		var t = document.getElementsByClassName("drag");
+		for(var i=0; i<t.length; i++){
+			t[i].style.display = "block";
+			t[i].style.position = "absolute";
+			t[i].style.cursor = "pointer";
+			t[i].ondragstart = function(e){e.preventDefault();};
+			t[i].onmousedown = function(e){ d = true; dx = e.offsetX; dy = e.offsetY; target = e.target;}
+			t[i].onmouseup = function(){ d = false;}
+			window.onmousemove = function(e){ 
+				if(d){ target.style.left = (e.clientX - dx) + "px";
+					target.style.top = (e.clientY - dy) + "px";}
+			}
+		}
+	})();
+	</script>
+
+
+</body>
